@@ -34,7 +34,7 @@
                                     </div>
 
                 <div class="forget">
-                    <a href="#">Forgot Password</a>
+                    <a href="#">ForgotPassword</a>
                 </div>
 
                 <div>  
