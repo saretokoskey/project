@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Invalid password.";
         }
     } else {
-        echo "No user found with this username and email.";
+        echo "The user does not exist.";
 
     }
 }
