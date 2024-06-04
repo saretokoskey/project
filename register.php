@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div>
         <form action="login.php" method="POST">
             <div class="img_container">
@@ -14,6 +15,7 @@
             </div>
             <div class="container">
                 <div>
+
                     <label for="username">Username</label>
                     <input type="username" id="uname" name="username" placeholder="Enter your username" required>
                 </div>
@@ -22,10 +24,6 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
-                <!-- <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
-                </div> -->
                 <div class="form-group mb-2">
                                         <label for="" class="form-control-label" >Password</label>
                                         <input name="password" type="password" class="form-control" id="myInput">
