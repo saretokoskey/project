@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Reporting</title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content-body">
+    <div class="banner">
+        <div class="banner-text">
+            <h1>MINISTRY OF INVESTMENTS, TRADE & INDUSTRY</h1>
+            <h2>STATE DEPARTMENT FOR TRADE</h2>
+            <h4>ICT DEPARTMENT TECHNICAL SUPPORT REGISTER</h4>
+            <h2>Welcome</h2>
+             <p>You are logged in as <?php echo $role; ?>.</p>      
+        </div>
+    </div>
+</div>
+</main>
+
+<div class="container">
+  <h1 class="mt-5 mb-4">Time Reporting</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <button id="reportButton" class="btn btn-primary btn-lg btn-block">Report Current Time</button>
+    </div>
+    <div class="col-sm-6">
+      <button id="submitButton" class="btn btn-success btn-lg btn-block">Submit Existing Time</button>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('#reportButton').click(function() {
+    var currentTime = new Date().toLocaleString();
+    submitTime(currentTime);
+  });
+
+  $('#submitButton').click(function() {
+    var existingTime = prompt("Please enter the existing time (YYYY-MM-DD HH:MM:SS):");
+    if(existingTime !== null && existingTime !== "") {
+      submitTime(existingTime);
+    }
+  });
+
+  function submitTime(time) {
+    $.ajax({
+      type: "POST",
+      url: "submit_time.php",
+      data: { time: time },
+      success: function(response) {
+        alert(response);
+      },
+      error: function(xhr, status, error) {
+        console.error(xhr.responseText);
+        alert("An error occurred while submitting the time.");
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
