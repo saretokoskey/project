@@ -9,7 +9,7 @@
 <body>
     
     <div>
-        <form action="login.php" method="POST">
+        <form action="reporting.html" method="POST">
             <div class="img_container">
                 <img src="images/profile.png" alt="Profile Picture">
             </div>
