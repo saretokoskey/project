@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
             $_SESSION['username'] = $username;
-            header("Location: welcome.php"); 
+            header("Location: reporting.html"); 
         } else {
             echo "Invalid password.";
         }
