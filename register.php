@@ -25,11 +25,26 @@
                 </div>
 
                 <div class="form-group mb-2">
-                                        <label for="" class="form-control-label" >Password</label>
-                                        <input name="password" type="password" class="form-control" id="myInput">
-                                        <br>
-                                        <input type="checkbox" onclick="myFunction()">Show Password
-                                    </div>
+                    <label for="myInput" class="form-control-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="myInput">
+                    <!-- <br>
+                    <input type="checkbox" id="showPasswordCheckbox"> Show Password -->
+                </div>
+                
+                <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var passwordInput = document.getElementById("myInput");
+                    var checkbox = document.getElementById("showPasswordCheckbox");
+                    
+                    checkbox.addEventListener("click", function() {
+                        if (checkbox.checked) {
+                            passwordInput.type = "text";
+                        } else {
+                            passwordInput.type = "password";
+                        }
+                    });
+                });
+                </script>
 
                 <div class="forget">
                     <a href="#">ForgotPassword</a>
