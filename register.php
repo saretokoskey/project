@@ -31,8 +31,8 @@
                 <div class="form-group mb-2">
                     <label for="myInput" class="form-control-label">Password</label>
                     <input name="password" type="password" class="form-control" id="myInput">
-                    <!-- <br>
-                    <input type="checkbox" id="showPasswordCheckbox"> Show Password -->
+                    <br>
+                    <input type="checkbox" id="showPasswordCheckbox"> Show Password
                 </div>
                 
                 <script>
