@@ -11,7 +11,7 @@
     
 
     <div>
-        <form action="reporting.html" method="POST">
+        <form action="reporting.php" method="POST">
             <div class="img_container">
                 <img src="images/profile.png" alt="Profile Picture">
             </div>
