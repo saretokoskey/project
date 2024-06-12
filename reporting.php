@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 
 // After successful login
@@ -7,7 +7,7 @@ if (isset($_SESSION['Username']))
 
 include "database.php";
    
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
