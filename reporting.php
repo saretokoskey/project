@@ -1,13 +1,9 @@
-<!-- <?php
+<?php 
 session_start();
 
-// After successful login
-$_SESSION['Username'] = $username; // $username should contain the logged-in user's username
-if (isset($_SESSION['Username'])) 
+if (isset($_SESSION['id']) && isset($_SESSION['Username'])) {}
 
-include "database.php";
-   
-?> -->
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +73,7 @@ include "database.php";
                 <h1>MINISTRY OF INVESTMENTS, TRADE & INDUSTRY</h1>
                 <h2>STATE DEPARTMENT FOR TRADE</h2>
                 <h4>STAFF ATTENDANCE-CHECK SYSTEM</h4>
-                <h2>Welcome,<?php echo htmlspecialchars($_SESSION['Username']); ?>!</h2>
+                <h2>Welcome,<?php echo htmlspecialchars($_SESSION['Username']); ?>
                 <!-- Display logged-in user's username -->
                 
             </div>
